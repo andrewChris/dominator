@@ -7,21 +7,59 @@
 //
 
 #import "ViewController.h"
+#import "TwitterObject.h"
+#import "HappinessViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
+
+@property (nonatomic, strong) IBOutlet UITextField *twitterNameTextField;
+
+@property (nonatomic, strong) TwitterObject *twitterResponse;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+  
+    [self.navigationItem setTitle:@"Happy Tweeters"];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor colorWithRed:0.0/255.0 green:125.0/255.0 blue:186.0/255. alpha:1.0f]}];
+    
+    [self.twitterNameTextField setText:@"@"];
+    
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+- (void)getTwitterFollwers
+{
+    NSURL *URL = [NSURL URLWithString:@""];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error)
+                                  {
+                                      NSError *error1;
+                                      NSMutableDictionary * jsonResponse = [NSJSONSerialization
+                                                                         JSONObjectWithData:data options:kNilOptions error:&error1];
+                                      
+                                      self.twitterResponse.jsonResponse = jsonResponse;
+                                      HappinessViewController *happyVC = [[HappinessViewController alloc]init];
+                                      happyVC.twitterObject = self.twitterResponse;
+                                      [self.navigationController pushViewController:happyVC animated:YES];
+                                  }];
+    
+    [task resume];
+}
+
 
 @end
