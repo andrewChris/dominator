@@ -15,6 +15,7 @@
 		3F12F28E1C8FE18600894A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F12F28C1C8FE18600894A7A /* LaunchScreen.storyboard */; };
 		3F12F2971C8FEC1000894A7A /* TwitterObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12F2961C8FEC1000894A7A /* TwitterObject.m */; };
 		3F12F29F1C8FED6400894A7A /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12F29E1C8FED6400894A7A /* HappinessViewController.m */; };
+		DCEE94301C90D97200EAC9D9 /* TwitterJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		3F12F2961C8FEC1000894A7A /* TwitterObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterObject.m; sourceTree = "<group>"; };
 		3F12F29D1C8FED6400894A7A /* HappinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappinessViewController.h; sourceTree = "<group>"; };
 		3F12F29E1C8FED6400894A7A /* HappinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
+		DCEE942E1C90D97200EAC9D9 /* TwitterJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterJSONParser.h; sourceTree = "<group>"; };
+		DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterJSONParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				3F12F27E1C8FE18600894A7A /* Supporting Files */,
 				3F12F29D1C8FED6400894A7A /* HappinessViewController.h */,
 				3F12F29E1C8FED6400894A7A /* HappinessViewController.m */,
+				DCEE942E1C90D97200EAC9D9 /* TwitterJSONParser.h */,
+				DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */,
 			);
 			path = Dominator;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				3F12F2861C8FE18600894A7A /* ViewController.m in Sources */,
 				3F12F2831C8FE18600894A7A /* AppDelegate.m in Sources */,
 				3F12F2801C8FE18600894A7A /* main.m in Sources */,
+				DCEE94301C90D97200EAC9D9 /* TwitterJSONParser.m in Sources */,
 				3F12F29F1C8FED6400894A7A /* HappinessViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

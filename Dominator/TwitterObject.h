@@ -13,3 +13,11 @@
 @property (nonatomic, strong) NSMutableDictionary *jsonResponse;
 
 @end
+
+@interface TwitterFollower : NSObject
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSURL *imageURL;
+@property (nonatomic) bool isHappy;
+
+@end
