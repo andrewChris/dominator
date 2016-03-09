@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TwitterObject.h"
 #import "HappinessViewController.h"
+#import "TwitterJSONParser.h"
 
 @interface ViewController () <UITextFieldDelegate>
 
@@ -54,6 +55,8 @@
                                       NSError *error1;
                                       NSMutableDictionary * jsonResponse = [NSJSONSerialization
                                                                          JSONObjectWithData:data options:kNilOptions error:&error1];
+                                      
+                                      NSArray *followers = [TwitterJSONParser parseTwitterJSON:jsonResponse];
                                       
                                       self.twitterResponse.jsonResponse = jsonResponse;
                                       

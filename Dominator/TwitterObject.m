@@ -11,3 +11,7 @@
 @implementation TwitterObject
 
 @end
+
+@implementation TwitterFollower
+
+@end
