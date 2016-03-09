@@ -17,16 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3r-pd-bFp">
-                                <rect key="frame" x="44" y="215" width="287" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.0" green="0.49019607900000001" blue="0.72941178080000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="znm-8q-mLm"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a twitter account to view if their followers are happy or sad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFo-A7-cfb">
                                 <rect key="frame" x="29" y="124" width="316" height="103"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
@@ -43,6 +33,16 @@
                                     <action selector="getTwitterFollowers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q4v-7W-Igs"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3r-pd-bFp">
+                                <rect key="frame" x="44" y="215" width="287" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.49019607900000001" blue="0.72941178080000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="znm-8q-mLm"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.49019607900000001" blue="0.72941178080000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -61,7 +61,7 @@
         <!--Happiness View Controller-->
         <scene sceneID="cle-M1-krf">
             <objects>
-                <viewController id="6C9-Sh-lqa" customClass="HappinessViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="happinessVC" id="6C9-Sh-lqa" customClass="HappinessViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wQy-Pj-iIt"/>
                         <viewControllerLayoutGuide type="bottom" id="rR5-rO-z9m"/>

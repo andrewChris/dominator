@@ -31,7 +31,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor colorWithRed:0.0/255.0 green:125.0/255.0 blue:186.0/255. alpha:1.0f]}];
     
-    [self.twitterNameTextField setText:@"@"];
+    [self.twitterNameTextField setText:@"@rickygervais"];
     
 }
 
@@ -56,9 +56,15 @@
                                                                          JSONObjectWithData:data options:kNilOptions error:&error1];
                                       
                                       self.twitterResponse.jsonResponse = jsonResponse;
-                                      HappinessViewController *happyVC = [[HappinessViewController alloc]init];
-                                      happyVC.twitterObject = self.twitterResponse;
-                                      [self.navigationController pushViewController:happyVC animated:YES];
+                                      
+                                      dispatch_async(dispatch_get_main_queue(), ^{
+                                         
+                                          HappinessViewController *happyVC = (HappinessViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"happinessVC"];
+                                          happyVC.twitterObject = self.twitterResponse;
+                                          [self.navigationController pushViewController:happyVC animated:YES];
+                                          
+                                      });
+                                      
                                   }];
     
     [task resume];
