@@ -12,5 +12,6 @@
 @interface HappinessViewController : UIViewController
 
 @property (nonatomic, strong) TwitterObject *twitterObject;
+@property (nonatomic, strong) NSArray *followers;
 
 @end
