@@ -16,6 +16,7 @@
 		3F12F2971C8FEC1000894A7A /* TwitterObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12F2961C8FEC1000894A7A /* TwitterObject.m */; };
 		3F12F29F1C8FED6400894A7A /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12F29E1C8FED6400894A7A /* HappinessViewController.m */; };
 		DCEE94301C90D97200EAC9D9 /* TwitterJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */; };
+		DCEE94331C90DFB800EAC9D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE94321C90DFB800EAC9D9 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		3F12F29E1C8FED6400894A7A /* HappinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
 		DCEE942E1C90D97200EAC9D9 /* TwitterJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterJSONParser.h; sourceTree = "<group>"; };
 		DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterJSONParser.m; sourceTree = "<group>"; };
+		DCEE94311C90DFB800EAC9D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		DCEE94321C90DFB800EAC9D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				3F12F2851C8FE18600894A7A /* ViewController.m */,
 				3F12F2871C8FE18600894A7A /* Main.storyboard */,
 				3F12F28A1C8FE18600894A7A /* Assets.xcassets */,
+				DCEE94311C90DFB800EAC9D9 /* MBProgressHUD.h */,
+				DCEE94321C90DFB800EAC9D9 /* MBProgressHUD.m */,
 				3F12F28C1C8FE18600894A7A /* LaunchScreen.storyboard */,
 				3F12F28F1C8FE18600894A7A /* Info.plist */,
 				3F12F27E1C8FE18600894A7A /* Supporting Files */,
@@ -170,6 +175,7 @@
 				3F12F2801C8FE18600894A7A /* main.m in Sources */,
 				DCEE94301C90D97200EAC9D9 /* TwitterJSONParser.m in Sources */,
 				3F12F29F1C8FED6400894A7A /* HappinessViewController.m in Sources */,
+				DCEE94331C90DFB800EAC9D9 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import "TwitterObject.h"
 #import "HappinessViewController.h"
 #import "TwitterJSONParser.h"
+#import "MBProgressHUD.h"
 
 @interface ViewController () <UITextFieldDelegate>
 
@@ -47,6 +48,8 @@
     NSURL *URL = [NSURL URLWithString:URLString];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request
                                             completionHandler:
@@ -56,11 +59,13 @@
                                       NSMutableDictionary * jsonResponse = [NSJSONSerialization
                                                                          JSONObjectWithData:data options:kNilOptions error:&error1];
                                       
-                                      NSArray *followers = [TwitterJSONParser parseTwitterJSON:jsonResponse];
+                                      NSDictionary *followers = [TwitterJSONParser parseTwitterJSON:jsonResponse];
                                       
-                                      self.twitterResponse.jsonResponse = jsonResponse;
+                                      //self.twitterResponse.jsonResponse = followers;
                                       
                                       dispatch_async(dispatch_get_main_queue(), ^{
+                                          
+                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
                                          
                                           HappinessViewController *happyVC = (HappinessViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"happinessVC"];
                                           happyVC.twitterObject = self.twitterResponse;

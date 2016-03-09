@@ -10,6 +10,6 @@
 
 @interface TwitterJSONParser : NSObject
 
-+(NSArray *)parseTwitterJSON:(NSDictionary *)dict;
++(NSDictionary *)parseTwitterJSON:(NSDictionary *)dict;
 
 @end
