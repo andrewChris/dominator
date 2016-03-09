@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
   
-    [self.navigationItem setTitle:@"Happy Tweeters"];
+    [self.navigationItem setTitle:@"Dominator"];
     
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor colorWithRed:0.0/255.0 green:125.0/255.0 blue:186.0/255. alpha:1.0f]}];
