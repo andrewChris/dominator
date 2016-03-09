@@ -39,6 +39,9 @@
                                 <state key="normal" title="Go!">
                                     <color key="titleColor" red="1" green="0.94073693359999999" blue="0.14175024680000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="getTwitterFollowers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q4v-7W-Igs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.49019607900000001" blue="0.72941178080000002" alpha="1" colorSpace="calibratedRGB"/>

@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) TwitterObject *twitterResponse;
 
+- (IBAction)getTwitterFollowers:(id)sender;
+
 @end
 
 @implementation ViewController
@@ -38,9 +40,10 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)getTwitterFollwers
+- (IBAction)getTwitterFollowers:(id)sender
 {
-    NSURL *URL = [NSURL URLWithString:@""];
+    NSString *URLString = [NSString stringWithFormat:@"http://wordpressify.mybluemix.net/twitter?id=%@", self.twitterNameTextField.text];
+    NSURL *URL = [NSURL URLWithString:URLString];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     NSURLSession *session = [NSURLSession sharedSession];
