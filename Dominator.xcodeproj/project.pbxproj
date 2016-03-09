@@ -15,6 +15,8 @@
 		3F12F28E1C8FE18600894A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F12F28C1C8FE18600894A7A /* LaunchScreen.storyboard */; };
 		3F12F2971C8FEC1000894A7A /* TwitterObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12F2961C8FEC1000894A7A /* TwitterObject.m */; };
 		3F12F29F1C8FED6400894A7A /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12F29E1C8FED6400894A7A /* HappinessViewController.m */; };
+		3F12F2A31C90D94500894A7A /* FollowerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12F2A11C90D94500894A7A /* FollowerTableViewCell.m */; };
+		3F12F2A41C90D94500894A7A /* FollowerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F12F2A21C90D94500894A7A /* FollowerTableViewCell.xib */; };
 		DCEE94301C90D97200EAC9D9 /* TwitterJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */; };
 		DCEE94331C90DFB800EAC9D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE94321C90DFB800EAC9D9 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,9 @@
 		3F12F2961C8FEC1000894A7A /* TwitterObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterObject.m; sourceTree = "<group>"; };
 		3F12F29D1C8FED6400894A7A /* HappinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappinessViewController.h; sourceTree = "<group>"; };
 		3F12F29E1C8FED6400894A7A /* HappinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
+		3F12F2A01C90D94500894A7A /* FollowerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowerTableViewCell.h; sourceTree = "<group>"; };
+		3F12F2A11C90D94500894A7A /* FollowerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowerTableViewCell.m; sourceTree = "<group>"; };
+		3F12F2A21C90D94500894A7A /* FollowerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowerTableViewCell.xib; sourceTree = "<group>"; };
 		DCEE942E1C90D97200EAC9D9 /* TwitterJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterJSONParser.h; sourceTree = "<group>"; };
 		DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterJSONParser.m; sourceTree = "<group>"; };
 		DCEE94311C90DFB800EAC9D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -85,6 +90,9 @@
 				3F12F27E1C8FE18600894A7A /* Supporting Files */,
 				3F12F29D1C8FED6400894A7A /* HappinessViewController.h */,
 				3F12F29E1C8FED6400894A7A /* HappinessViewController.m */,
+				3F12F2A01C90D94500894A7A /* FollowerTableViewCell.h */,
+				3F12F2A11C90D94500894A7A /* FollowerTableViewCell.m */,
+				3F12F2A21C90D94500894A7A /* FollowerTableViewCell.xib */,
 				DCEE942E1C90D97200EAC9D9 /* TwitterJSONParser.h */,
 				DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */,
 			);
@@ -159,6 +167,7 @@
 				3F12F28E1C8FE18600894A7A /* LaunchScreen.storyboard in Resources */,
 				3F12F28B1C8FE18600894A7A /* Assets.xcassets in Resources */,
 				3F12F2891C8FE18600894A7A /* Main.storyboard in Resources */,
+				3F12F2A41C90D94500894A7A /* FollowerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
