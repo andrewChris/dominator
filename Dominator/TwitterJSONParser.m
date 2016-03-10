@@ -30,9 +30,6 @@
         
         TwitterFollower *follower = [TwitterFollower new];
         
-//        follower.name = [followerDict objectForKey:@"name"];
-//        follower.imageURL = [NSURL URLWithString:[followerDict objectForKey:@"profile_image_url"]];
-        
         follower.name = @"Eddie";
         follower.imageURL = nil;
         
@@ -49,6 +46,23 @@
         follower.isHappy = isHappy;
         
         [followers addObject:follower];
+        
+    }
+    
+    NSDictionary *usersDict = [dict objectForKey:@"users"];
+    
+    int index = 0;
+    
+    for (NSArray *key in usersDict.allKeys) {
+        
+        TwitterFollower *follower = followers[index];
+        
+        NSDictionary *item = [usersDict objectForKey:key];
+        
+        follower.name = [item objectForKey:@"name"];
+        follower.imageURL = [NSURL URLWithString:[item objectForKey:@"profile_image_url"]];
+        
+        index++;
         
     }
     
