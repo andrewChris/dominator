@@ -33,7 +33,7 @@
         
         bool isHappy = false; //Pull from JSON
         
-        follower.isHappy = isHappy;
+        follower.isHappy = !isHappy;
         
         if (isHappy) {
             numberHappy++;
