@@ -130,8 +130,8 @@
     NSData *data = [NSData dataWithContentsOfURL:twitterFollower.imageURL];
     UIImage *img = [[UIImage alloc] initWithData:data];
     
-    [cell.profilePic]
-    [cell.profilePic setImage:img];
+//    [cell.profilePic]
+//    [cell.profilePic setImage:img];
     [cell.followerName setText:twitterFollower.name];
     
     return cell;

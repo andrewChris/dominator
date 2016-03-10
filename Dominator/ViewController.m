@@ -33,7 +33,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor colorWithRed:0.0/255.0 green:125.0/255.0 blue:186.0/255. alpha:1.0f]}];
     
-    [self.twitterNameTextField setText:@"@rickygervais"];
+    [self.twitterNameTextField setText:@"@Dain_IBM"];
     
 }
 
@@ -44,7 +44,7 @@
 
 - (IBAction)getTwitterFollowers:(id)sender
 {
-    NSString *URLString = [NSString stringWithFormat:@"http://wordpressify.mybluemix.net/twitter?id=%@", self.twitterNameTextField.text];
+    NSString *URLString = [NSString stringWithFormat:@"http://dain-twitter.mybluemix.net/?id=%@", self.twitterNameTextField.text];
     NSURL *URL = [NSURL URLWithString:URLString];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
