@@ -15,6 +15,7 @@
 @interface ViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextField *twitterNameTextField;
+@property (nonatomic, strong) IBOutlet UIButton *startButton;
 
 @property (nonatomic, strong) TwitterObject *twitterResponse;
 
@@ -28,12 +29,16 @@
 {
     [super viewDidLoad];
   
-    [self.navigationItem setTitle:@"Dominator"];
+    [self.navigationItem setTitle:@"Happy or Sad?"];
     
     [self.navigationController.navigationBar setTitleTextAttributes:
-     @{NSForegroundColorAttributeName:[UIColor colorWithRed:0.0/255.0 green:125.0/255.0 blue:186.0/255. alpha:1.0f]}];
+     @{NSForegroundColorAttributeName:[UIColor colorWithRed:46.0/255.0 green:196.0/255.0 blue:182.0/255. alpha:1.0f]}];
     
-    [self.twitterNameTextField setText:@"@Dain_IBM"];
+    [self.twitterNameTextField setText:@"@"];
+    
+    self.startButton.layer.borderWidth = 2.0f;
+    self.startButton.layer.cornerRadius = 10.0f;
+    self.startButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
 }
 
