@@ -34,7 +34,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor colorWithRed:46.0/255.0 green:196.0/255.0 blue:182.0/255. alpha:1.0f]}];
     
-    [self.twitterNameTextField setText:@"@Dain_IBM"];
+    [self.twitterNameTextField setText:@"@"];
     
     self.startButton.layer.borderWidth = 2.0f;
     self.startButton.layer.cornerRadius = 10.0f;
