@@ -26,11 +26,13 @@
         
         NSDictionary *item = [alchemyDict objectForKey:key];
         
+        if (item.allKeys.count == 0) continue;
+        
         NSString *type = [[item objectForKey:@"docSentiment"] objectForKey:@"type"];
         
         TwitterFollower *follower = [TwitterFollower new];
         
-        bool isHappy = false; 
+        bool isHappy = false;
         
         if ([type isEqualToString:@"positive"]) {
             isHappy = YES;
@@ -51,6 +53,8 @@
     int index = 0;
     
     for (NSArray *key in usersDict.allKeys) {
+        
+        if (index > followers.count - 1) continue;
         
         TwitterFollower *follower = followers[index];
         
