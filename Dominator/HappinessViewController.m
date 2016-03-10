@@ -134,6 +134,10 @@
 //    [cell.profilePic setImage:img];
     [cell.followerName setText:twitterFollower.name];
     
+    [cell setBackgroundColor:[UIColor colorWithRed:0.0/255.0 green:125.0/255.0 blue:186.0/255. alpha:(twitterFollower.isHappy) ? 0.5f : 0.2f]];
+    
+    [cell.followerName setTextColor:(twitterFollower.isHappy) ? [UIColor colorWithRed:0.0/255.0 green:107.0/255.0 blue:5.0/255. alpha:1.0f] : [UIColor colorWithRed:170.0/255.0 green:14.0/255.0 blue:22.0/255. alpha:1.0f]];
+    
     return cell;
 }
 
