@@ -17,29 +17,49 @@
     
     NSMutableArray *followers = [NSMutableArray new];
     
-    NSArray *usersArray = [dict objectForKey:@"users"];
+    NSDictionary *alchemyDict = [dict objectForKey:@"alchemy"];
     
     int numberHappy = 0;
     int numberSad = 0;
     
-    for (NSDictionary *followerDict in usersArray) {
+    for (NSArray *key in alchemyDict.allKeys) {
+        
+        NSDictionary *item = [alchemyDict objectForKey:key];
+        
+        NSString *type = [[item objectForKey:@"docSentiment"] objectForKey:@"type"];
         
         TwitterFollower *follower = [TwitterFollower new];
         
-        follower.name = [followerDict objectForKey:@"name"];
-        follower.imageURL = [NSURL URLWithString:[followerDict objectForKey:@"profile_image_url"]];
+        bool isHappy = false; 
+        
+        if ([type isEqualToString:@"positive"]) {
+            isHappy = YES;
+            numberHappy++;
+        }else {
+            isHappy = NO;
+            numberSad++;
+        }
+        
+        follower.isHappy = isHappy;
         
         [followers addObject:follower];
         
-        bool isHappy = false; //Pull from JSON
+    }
+    
+    NSDictionary *usersDict = [dict objectForKey:@"users"];
+    
+    int index = 0;
+    
+    for (NSArray *key in usersDict.allKeys) {
         
-        follower.isHappy = !isHappy;
+        TwitterFollower *follower = followers[index];
         
-        if (isHappy) {
-            numberHappy++;
-        }else {
-            numberSad++;
-        }
+        NSDictionary *item = [usersDict objectForKey:key];
+        
+        follower.name = [item objectForKey:@"name"];
+        follower.imageURL = [NSURL URLWithString:[item objectForKey:@"profile_image_url"]];
+        
+        index++;
         
     }
     

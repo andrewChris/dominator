@@ -50,6 +50,12 @@
     CGFloat happyBarWidth = ((self.view.frame.size.width - 115) / 100.0) * happyPercent;
     CGFloat sadBarWidth = ((self.view.frame.size.width - 115) / 100.0) * sadPercent;
     
+    if (happyPercent > 50) {
+        [self.overviewLabel setText:@"Your followers are happy"];
+    }else {
+        [self.overviewLabel setText:@"Your followers are sad"];
+    }
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         int count = 0;
@@ -130,8 +136,8 @@
     NSData *data = [NSData dataWithContentsOfURL:twitterFollower.imageURL];
     UIImage *img = [[UIImage alloc] initWithData:data];
     
-    UIImage *happyImage = [UIImage imageNamed:@"happy_face"];
-    UIImage *sadImage = [UIImage imageNamed:@"sad_face"];
+    UIImage *happyImage = [UIImage imageNamed:@"happy"];
+    UIImage *sadImage = [UIImage imageNamed:@"upset"];
     [cell.happinessImageView setImage:(twitterFollower.isHappy) ? happyImage : sadImage];
     [cell.profilePic setImage:img];
     [cell.followerName setText:twitterFollower.name];

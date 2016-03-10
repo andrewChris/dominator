@@ -20,6 +20,8 @@
 		3FA6356A1C90F6D5003CC67A /* sad_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA635691C90F6D5003CC67A /* sad_face.png */; };
 		DCEE94301C90D97200EAC9D9 /* TwitterJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */; };
 		DCEE94331C90DFB800EAC9D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE94321C90DFB800EAC9D9 /* MBProgressHUD.m */; };
+		DCEE94391C90FBED00EAC9D9 /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = DCEE94371C90FBED00EAC9D9 /* happy.png */; };
+		DCEE943A1C90FBED00EAC9D9 /* upset.png in Resources */ = {isa = PBXBuildFile; fileRef = DCEE94381C90FBED00EAC9D9 /* upset.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterJSONParser.m; sourceTree = "<group>"; };
 		DCEE94311C90DFB800EAC9D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		DCEE94321C90DFB800EAC9D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		DCEE94371C90FBED00EAC9D9 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
+		DCEE94381C90FBED00EAC9D9 /* upset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upset.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		3F12F27E1C8FE18600894A7A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCEE94371C90FBED00EAC9D9 /* happy.png */,
+				DCEE94381C90FBED00EAC9D9 /* upset.png */,
 				3FA635651C90F5C9003CC67A /* happy_face.png */,
 				3FA635691C90F6D5003CC67A /* sad_face.png */,
 				3F12F27F1C8FE18600894A7A /* main.m */,
@@ -169,8 +175,10 @@
 			files = (
 				3F12F28E1C8FE18600894A7A /* LaunchScreen.storyboard in Resources */,
 				3FA6356A1C90F6D5003CC67A /* sad_face.png in Resources */,
+				DCEE94391C90FBED00EAC9D9 /* happy.png in Resources */,
 				3FA635671C90F5C9003CC67A /* happy_face.png in Resources */,
 				3F12F28B1C8FE18600894A7A /* Assets.xcassets in Resources */,
+				DCEE943A1C90FBED00EAC9D9 /* upset.png in Resources */,
 				3F12F2891C8FE18600894A7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
