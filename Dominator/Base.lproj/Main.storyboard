@@ -45,7 +45,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6ys-L2-DAK"/>
+                    <navigationItem key="navigationItem" id="6ys-L2-DAK">
+                        <barButtonItem key="backBarButtonItem" title=" " id="jyK-yN-8AF"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
