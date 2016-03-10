@@ -7,9 +7,9 @@
 //
 
 #import "HappinessViewController.h"
-#import "TwitterObject.h"
+#import "FollowerCell.h"
 
-@interface HappinessViewController ()
+@interface HappinessViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIView *happyBar;
 @property (nonatomic, strong) IBOutlet UIView *sadBar;
@@ -25,6 +25,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setTitle:@"Happy or Sad?"];
     
     [self performSelector:@selector(animateGraph) withObject:nil afterDelay:0.5];
 }
@@ -42,11 +44,11 @@
 
 - (void)animateGraph
 {
-    double happyPercent = 70.0f;
-    double sadPercent = 30.0f;
+    double happyPercent = [[self.followers objectForKey:@"percentHappy"] doubleValue];
+    double sadPercent = [[self.followers objectForKey:@"percentSad"] doubleValue];
     
-    CGFloat happyBarWidth = ((self.view.frame.size.width - 85) / 100.0) * happyPercent;
-    CGFloat sadBarWidth = ((self.view.frame.size.width - 85) / 100.0) * sadPercent;
+    CGFloat happyBarWidth = ((self.view.frame.size.width - 115) / 100.0) * happyPercent;
+    CGFloat sadBarWidth = ((self.view.frame.size.width - 115) / 100.0) * sadPercent;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
@@ -115,6 +117,36 @@
                      }completion:^(BOOL finished) {
                          
                      }];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FollowerCell *cell = (FollowerCell *)[tableView dequeueReusableCellWithIdentifier:@"followerCell"];
+    
+    NSArray *followersArray = [self.followers objectForKey:@"followers"];
+    
+    TwitterFollower *twitterFollower = [followersArray objectAtIndex:indexPath.row];
+
+    NSData *data = [NSData dataWithContentsOfURL:twitterFollower.imageURL];
+    UIImage *img = [[UIImage alloc] initWithData:data];
+    
+    [cell.profilePic]
+    [cell.profilePic setImage:img];
+    [cell.followerName setText:twitterFollower.name];
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSArray *followers = [self.followers objectForKey:@"followers"];
+    
+    return [followers count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
 }
 
 @end

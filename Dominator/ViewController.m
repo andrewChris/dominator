@@ -10,6 +10,7 @@
 #import "TwitterObject.h"
 #import "HappinessViewController.h"
 #import "TwitterJSONParser.h"
+#import "MBProgressHUD.h"
 
 @interface ViewController () <UITextFieldDelegate>
 
@@ -32,7 +33,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor colorWithRed:0.0/255.0 green:125.0/255.0 blue:186.0/255. alpha:1.0f]}];
     
-    [self.twitterNameTextField setText:@"@achristo"];
+    [self.twitterNameTextField setText:@"@rickygervais"];
     
 }
 
@@ -47,38 +48,40 @@
     NSURL *URL = [NSURL URLWithString:URLString];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    HappinessViewController *happyVC = (HappinessViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"happinessVC"];
-    happyVC.twitterObject = self.twitterResponse;
-    //happyVC.followers = followers;
-    [self.navigationController pushViewController:happyVC animated:YES];
+//    HappinessViewController *happyVC = (HappinessViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"happinessVC"];
+//    happyVC.twitterObject = self.twitterResponse;
+//    //happyVC.followers = followers;
+//    [self.navigationController pushViewController:happyVC animated:YES];
     
     
-//    NSURLSession *session = [NSURLSession sharedSession];
-//    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
-//                                            completionHandler:
-//                                  ^(NSData *data, NSURLResponse *response, NSError *error)
-//                                  {
-//                                      NSError *error1;
-//                                      NSMutableDictionary * jsonResponse = [NSJSONSerialization
-//                                                                         JSONObjectWithData:data options:kNilOptions error:&error1];
-//                                      
-//                                      NSArray *followers = [TwitterJSONParser parseTwitterJSON:jsonResponse];
-//                                      
-//                                      self.twitterResponse.jsonResponse = jsonResponse;
-//                                      
-//                                      dispatch_async(dispatch_get_main_queue(), ^{
-//                                         
-//                                          HappinessViewController *happyVC = (HappinessViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"happinessVC"];
-//                                          happyVC.twitterObject = self.twitterResponse;
-//                                          happyVC.followers = followers;
-//                                          [self.navigationController pushViewController:happyVC animated:YES];
-//                                          
-//                                      });
-//                                      
-//                                  }];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error)
+                                  {
+                                      NSError *error1;
+                                      NSMutableDictionary * jsonResponse = [NSJSONSerialization
+                                                                         JSONObjectWithData:data options:kNilOptions error:&error1];
+                                      
+                                      NSDictionary *followers = [TwitterJSONParser parseTwitterJSON:jsonResponse];
+                                      
+                                      self.twitterResponse.jsonResponse = jsonResponse;
+                                      
+                                      dispatch_async(dispatch_get_main_queue(), ^{
+                                         
+                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                          HappinessViewController *happyVC = (HappinessViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"happinessVC"];
+                                          happyVC.twitterObject = self.twitterResponse;
+                                          happyVC.followers = followers;
+                                          [self.navigationController pushViewController:happyVC animated:YES];
+                                          
+                                      });
+                                      
+                                  }];
     
-//    [task resume];
+    [task resume];
 }
 
 
