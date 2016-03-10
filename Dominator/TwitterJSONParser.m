@@ -30,10 +30,7 @@
         
         TwitterFollower *follower = [TwitterFollower new];
         
-        follower.name = @"Eddie";
-        follower.imageURL = nil;
-        
-        bool isHappy = false; //Pull from JSON
+        bool isHappy = false; 
         
         if ([type isEqualToString:@"positive"]) {
             isHappy = YES;
