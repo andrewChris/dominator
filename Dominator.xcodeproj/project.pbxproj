@@ -16,6 +16,8 @@
 		3F12F2971C8FEC1000894A7A /* TwitterObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12F2961C8FEC1000894A7A /* TwitterObject.m */; };
 		3F12F29F1C8FED6400894A7A /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12F29E1C8FED6400894A7A /* HappinessViewController.m */; };
 		3FA635641C90F037003CC67A /* FollowerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA635631C90F037003CC67A /* FollowerCell.m */; };
+		3FA635671C90F5C9003CC67A /* happy_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA635651C90F5C9003CC67A /* happy_face.png */; };
+		3FA6356A1C90F6D5003CC67A /* sad_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA635691C90F6D5003CC67A /* sad_face.png */; };
 		DCEE94301C90D97200EAC9D9 /* TwitterJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */; };
 		DCEE94331C90DFB800EAC9D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE94321C90DFB800EAC9D9 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,8 @@
 		3F12F29E1C8FED6400894A7A /* HappinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
 		3FA635621C90F037003CC67A /* FollowerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowerCell.h; sourceTree = "<group>"; };
 		3FA635631C90F037003CC67A /* FollowerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowerCell.m; sourceTree = "<group>"; };
+		3FA635651C90F5C9003CC67A /* happy_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy_face.png; sourceTree = "<group>"; };
+		3FA635691C90F6D5003CC67A /* sad_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad_face.png; sourceTree = "<group>"; };
 		DCEE942E1C90D97200EAC9D9 /* TwitterJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterJSONParser.h; sourceTree = "<group>"; };
 		DCEE942F1C90D97200EAC9D9 /* TwitterJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterJSONParser.m; sourceTree = "<group>"; };
 		DCEE94311C90DFB800EAC9D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		3F12F27E1C8FE18600894A7A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3FA635651C90F5C9003CC67A /* happy_face.png */,
+				3FA635691C90F6D5003CC67A /* sad_face.png */,
 				3F12F27F1C8FE18600894A7A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -162,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F12F28E1C8FE18600894A7A /* LaunchScreen.storyboard in Resources */,
+				3FA6356A1C90F6D5003CC67A /* sad_face.png in Resources */,
+				3FA635671C90F5C9003CC67A /* happy_face.png in Resources */,
 				3F12F28B1C8FE18600894A7A /* Assets.xcassets in Resources */,
 				3F12F2891C8FE18600894A7A /* Main.storyboard in Resources */,
 			);
